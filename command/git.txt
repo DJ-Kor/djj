@@ -1,0 +1,10 @@
+git checkout -b <new branch>
+
+git branch --delete <deleting branch>
+
+git fetch origin
+git reset --hard origin/<source branch>
+
+git reset --hard HEAD~10 # HEAD 10단계 전으로 reset
+git clean -fd # untracked dir, files 삭제
+git clean -fdn # git clean -fd 결과 미리보기

@@ -1,0 +1,11 @@
+현재 location 하위에 있는 abc.txt를 find하는 command
+find . -name "abc.txt"
+
+현재 location 하위에 있는 abc가 들어간 directory와 files를 모두 find 하는 command
+find . -name "*abc*"
+
+현재 location 하위에 있는 abc가 들어간 directory이름을 모두 find하는 command
+find . -type d -name "*abc*"
+
+현재 location의 apple.jpg를 ssh server4.lge.com의 /home2/abc/ 의 위치에 copy하는 command
+scp apple.jpg user@server4.lge.com:/home2/abc/

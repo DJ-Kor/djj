@@ -1,0 +1,5 @@
+# copy from clipboard
+shift + insert
+
+# delete line
+number + dd

@@ -1,0 +1,8 @@
+현재 location의 apple.jpg를 ssh server4.lge.com의 /home2/abc/ 의 위치에 copy하는 command
+scp apple.jpg user@server4.lge.com:/home2/abc/
+
+docker 내부 => docker 외부
+docker cp <container_id>:/path/to/file /path/on/host
+
+docker 외부 => docker 내부
+docker cp /path/on/host <container_id>:/path/to/file
