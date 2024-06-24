@@ -1,0 +1,49 @@
+{
+    "remote.SSH.remotePlatform": {
+      "iddx": "linux",
+      "iddx.lge.com": "linux",
+      "iddx-dev.lge.com": "linux",
+      "iddx-server4": "linux",
+      "iddx-server4.lge.com": "linux",
+      "dj-server4": "linux",
+      "iddx-server5": "linux",
+      "iddx-server5.lge.com": "linux",
+      "dj-server5": "linux",
+    },
+    "window.commandCenter": true,
+    "window.zoomLevel": 1,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [80, 120, 160],
+    "typescript.workspaceSymbols.excludeLibrarySymbols": false,
+    "color-highlight.languages": ["*"],
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[html]": {
+      "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[python]": {
+      "editor.defaultFormatter": "ms-python.autopep8",
+      "editor.insertSpaces": true,
+      "editor.formatOnSave": true,
+      "editor.tabSize": 4
+    },
+    "[nginx]":{
+      "editor.defaultFormatter": "teclado.vscode-nginx-format",
+      "editor.formatOnSave": true
+    },
+    "autopep8.args": [
+      "--max-line-length=120",
+      "--ignore=W292,E266,E402"
+    ],
+    "git.confirmSync": false,
+    "gitlens.views.commitDetails.files.layout": "tree",
+    "multiDiffEditor.experimental.enabled": true,
+    "git.suggestSmartCommit": false,
+    "gitlens.views.branches.files.layout": "list",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?" // - 제외
+  }
+  
