@@ -1,5 +1,6 @@
 # djj
 Description : DJ personal
+[Visit Github Repo djj](https://github.com/DJ-Kor/djj)
 
 Relative links and image paths in README files 
 [Contribution guidelines for this project](docs/CONTRIBUTING.md)
