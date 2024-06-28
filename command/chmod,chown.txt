@@ -1,0 +1,10 @@
+chmod 
+    u user / g group / o others
+    r read 4 / w write 2 / x execute 1
+    + 추가 / - 제거 / = 설정
+
+chmod +x ./opengrok_pull.sh
+
+chown user:group filename
+
+chown dongjun.jang:dongjun.jang ./abc.txt

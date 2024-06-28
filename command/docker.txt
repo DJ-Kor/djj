@@ -1,4 +1,9 @@
-docker prune
+docker prune --> container / image / network / volume 가능
+docker system prune (모두)
 
+prune --filter "until=24h" 24시간 이전에 생성된
+prune --filter "label!=*" 라벨없는 것 모두
+
+docker exec -it <container> bash
+# -u0 : user root
 docker exec -itu0 <container> bash
-
