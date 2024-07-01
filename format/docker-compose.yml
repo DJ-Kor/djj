@@ -1,0 +1,57 @@
+version: "2.2"
+
+services:
+  es:
+    image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
+    container_name: iddx_es
+    restart: always
+    user: "1000"
+    volumes:
+      - ./certs:/usr/share/elasticsearch/config/certs
+      - ./elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - ./logs:/usr/share/elasticsearch/logs
+    ports:
+      - ${ES_PORT}:9200
+      - 9300:9300
+    environment:
+      - TZ=Asia/Seoul
+      - "ES_JAVA_OPTS=-Xms16g -Xmx16g"
+      - ELASTIC_PASSWORD=${ELASTIC_PASSWORD}
+      - xpack.security.enabled=true
+      - xpack.security.http.ssl.enabled=false # false
+      - xpack.security.transport.ssl.enabled=true
+      - xpack.security.transport.ssl.key=certs/iddx-node1/iddx-node1.key
+      - xpack.security.transport.ssl.certificate=certs/iddx-node1/iddx-node1.crt
+      - xpack.security.transport.ssl.certificate_authorities=certs/ca/ca.crt
+      - xpack.security.transport.ssl.verification_mode=certificate
+      - xpack.license.self_generated.type=${LICENSE}
+    oom_score_adj: -1000
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+
+  kibana:
+    depends_on:
+      - es
+    image: docker.elastic.co/kibana/kibana:${STACK_VERSION}
+    container_name: iddx_kibana
+    restart: always
+    user: "1000"
+    volumes:
+      - ./certs:/usr/share/kibana/config/certs
+      - kibanadata:/usr/share/kibana/data
+    ports:
+      - ${KIBANA_PORT}:5601
+    environment:
+      - SERVERNAME=kibana
+      - ELASTICSEARCH_HOSTS=http://10.19.218.14:9200 #
+      - ELASTICSEARCH_USERNAME=kibana_system
+      - ELASTICSEARCH_PASSWORD=${KIBANA_PASSWORD}
+      - SERVER_PUBLICBASEURL=http://iddx.lge.com:5601
+
+volumes:
+  certs:
+    driver: local
+  kibanadata:
+    driver: local

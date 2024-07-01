@@ -1,0 +1,17 @@
+instances:
+   - name: iddx-node1
+     dns:
+       - iddx.lge.com
+     ip:
+       - 10.19.218.14
+   - name: iddx-node2
+     dns:
+       - iddx-server4.lge.com
+     ip:
+       - 10.19.218.17
+   - name: iddx-node3
+     dns:
+       - iddx-server5.lge.com
+     ip:
+       - 10.19.218.18
+                 

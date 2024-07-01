@@ -1,0 +1,53 @@
+// IDDX Default Settings for VSCode
+
+{
+  // common
+  "editor.rulers": [0, 80, 120, 160, 161, 162, 163, 164, 165],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // user setting에서 files.association으로 어떤 file로 인식할지 설정
+  // "files.associations": {
+  //   // "*.json": "jsonc",
+  //   // "*.yml": "yaml",
+  // },
+  // .js
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "prettier.jsxSingleQuote": false,
+    "prettier.singleQuote": false,
+    "prettier.trailingComma": "all",
+    "prettier.tabWidth": 2,
+    "prettier.printWidth": 120
+  },
+  // .py
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8",
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4
+  },
+  "autopep8.args": ["--max-line-length=120", "--ignore=W292,E266,E402"], // https://pypi.org/project/autopep8/#features
+  // .css
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  // .json
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode", // vscode 는 줄바꿈 많음
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode", // vscode 는 줄바꿈 많음
+    "editor.formatOnSave": true
+  },
+  // docker-compose
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker",
+    "editor.formatOnSave": true
+  },
+  // Dockerfile
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker",
+    "editor.formatOnSave": true
+  }
+}

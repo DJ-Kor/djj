@@ -1,0 +1,10 @@
+json
+
+jsonc => json + comment
+// comment
+/* long comment */
+
+jsonl => json + line
+{"name": "John", "age": 30, "isStudent": false}
+{"name": "Jane", "age": 25, "isStudent": true}
+{"name": "Doe", "age": 22, "isStudent": false}

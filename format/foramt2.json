@@ -1,8 +1,10 @@
 // IDDX Default Settings for VSCode
 
 {
-  "editor.rulers": [120, 160],
+  // common
+  "editor.rulers": [120, 160, 161, 162, 163, 164, 165],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // .js
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
@@ -12,11 +14,25 @@
     "prettier.tabWidth": 2,
     "prettier.printWidth": 120
   },
+  // .py
   "[python]": {
     "editor.defaultFormatter": "ms-python.autopep8",
     "editor.insertSpaces": true,
     "editor.formatOnSave": true,
     "editor.tabSize": 4
   },
-  "autopep8.args": ["--max-line-length=120", "--ignore=W292,E266,E402"] // https://pypi.org/project/autopep8/#features
+  "autopep8.args": ["--max-line-length=120", "--ignore=W292,E266,E402"], // https://pypi.org/project/autopep8/#features
+  // .css
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  // .json
+  "[json]": {
+    "editor.quickSuggestions": {
+      "other": "on",
+      "comments": "off",
+      "strings": "off"
+    },
+    "editor.formatOnSave": true
+  }
 }
