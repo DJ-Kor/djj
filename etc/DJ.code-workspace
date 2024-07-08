@@ -1,0 +1,41 @@
+{
+  "folders": [
+    {
+      "path": ".."
+    },
+    {
+      "path": "../../iddx"
+    },
+    {
+      "path": "../../dockers"
+    },
+    {
+      "path": "../../iddx-backend-etl"
+    },
+    {
+      "path": "../../iddx-backend-ml"
+    },
+    {
+      "path": "../../ilamp-frontend"
+    },
+    {
+      "path": "../../ilamp-backend"
+    },
+    {
+      "path": "../../ilamp-etl"
+    },
+    {
+      "path": "../../aid-backend-etl"
+    },
+    {
+      "path": "../../solution_chatbot_ui"
+    },
+    {
+      "path": "../../solution_chatbot_backend"
+    },
+    {
+      "path": "../../elixir"
+    }
+  ],
+  "settings": {}
+}
