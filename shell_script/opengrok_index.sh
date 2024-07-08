@@ -4,7 +4,7 @@ echo " ----------- Start OpenGrok_Index.sh ! $(date) ----------- "
 # 사용자 정의 ctags 함수 정의
 ctags() {
     command ctags "$@" 2> >(
-        grep -Ev "^ctags: Warning: ignoring null tag in .+\.js\(line: .+\)$|^ctags: Warning: Unknown language \"XML:"
+        grep -Ev "^ctags: Warning: ignoring null tag in .+\.js\(line: .+\)$"
     )
 }
 
