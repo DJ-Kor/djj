@@ -1,0 +1,16 @@
+airflow에서 pip 관련
+
+
+error 1
+
+WARNING: The directory '/home/airflow/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+▶ pip에서 .cache사용할 때 권한 문제 --no-cache-dir 달아줘야함
+
+error 2
+ERROR: Can not perform a '--user' install. User site-packages are not visible in this virtualenv.
+▶ --user을 안썼어도 --no-user 을 달아줘야함
+
+error 3
+ERROR: Could not install packages due to an OSError: [Errno 13] Permission denied: '/opt/airflow/iddxvenv1/bin/pip'
+Check the permissions.
+▶ docker exec -itu0 로 container 들어가기

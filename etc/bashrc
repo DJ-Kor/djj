@@ -1,0 +1,9 @@
+alias ehw='echo Hello World'
+alias fufu='fuser -k 5393/tcp && fuser -k 5019/tcp'
+alias gpo='git push origin HEAD:refs/for/develop' # for wish.lge (deprecated)
+alias gc='git checkout'
+alias gcb='git checkout -b'
+alias gb='git branch'
+alias gbd='git branch --delete'
+alias gbD='git branch -D'
+alias gup='git push --set-upstream origin'

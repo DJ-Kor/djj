@@ -1,0 +1,40 @@
+note 24.09
+
+    - 사입가
+        - AIO는 가격 정보가 지역마다 다름
+        - AIO는 model_name 같아도 suffix따라 다름 -> model_name 같을 때는 맨위 (index 기준) 값으로 upload
+
+    vi율 관련 건
+    - 로직) 
+    - 프로젝트 별 할인율
+    - vi => 사입가 only 
+
+------------------
+
+24.09.05 memo
+동료평가 + 조책평가 ㅇ
+
+ledos price - management + reduction rate + dashboard 1차 완
+=> 유나해S 내용 배포
+
+BRM에서 QS-Tech project 가져오는지 확인
+
+조창환C - ledos dashboard - 지역별 / 모델별 판매 수량 확인
+        - harmony ticket - invalid watcher이어도 제외하고 issue create하게
+
+===========================
+[NEWERA]
+branch - "newera"
+install bun - curl -fsSL https://bun.sh/install | bash
+.env - NODE_TLS_REJECT_UNAUTHORIZED=0
+
+iddx/node_modules, iddx/server/node_modules, iddx/client/node_modules 삭제 후, bun install
+
+node -v 확인 후 => nvm use lts/hydrogen or nvm use 18.20.4 => lts/iron(최신) 으로
+* default node setting : nvm alias default <version>
+* alias node setting : nvm alias <alias_name> <version>
+=> bun start
+
+[harmony]
+watcher 이상하면 ???
+corp : 'QT' 일 때 error

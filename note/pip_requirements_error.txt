@@ -1,0 +1,4 @@
+AttributeError: module 'pkg_resources' has no attribute 'declare_namespace'
+pip install setuptools --force
+pip install --upgrade setuptools
+

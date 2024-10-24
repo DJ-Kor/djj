@@ -1,0 +1,9 @@
+moba master password : mobapassword
+
+
+official docs
+https://mobaxterm.mobatek.net/documentation.html#6_7_9
+
+
+config path
+Users/AppData/Roaming/MobaXterm/MobaXterm.ini

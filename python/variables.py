@@ -3,15 +3,15 @@ print('[1] os imported')
 
 GLO_VAR = "Global Var"
 print(GLO_VAR)
-
-
+             
+           
 class MyClass():
     CLASS_VAR = "Class Var"
     print(CLASS_VAR)
 
     def __init__(self):
         self.ins_var = "instance var"
-        self.client_edl = None
+        self.client_edl = None           
         print(self.ins_var)
 
     def setup(self):

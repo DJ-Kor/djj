@@ -1,0 +1,43 @@
+LGERC Mechanic
+
+IDDX - 제품정보 - ID Mechanic Document One System
+tab 2 - Document Upload 작성
+
+1. Commercial Development Master (.xlsx) - X
+2. Mass Production Check Sheet (.xlsx) - region + buyer region + production site
+3. Design Variation (.xlsx) - name + region
+4. Mechanical Specification (.jpg, .png) - name + region + (line drawing, acc, tool info, special)
+5. Rear/Side AV Information (.jpg, .png) - name + region
+
+front - Upload
+doc 종류에 따른 upload card 변화
+
+
+backend-etl - upload
+doc 종류에 따른 upload process 작성
+
+-----------
+24.07.24
+AV / MS = jpg, png 인 것들은 => multiple upload (O)
+# 새로 업로드 하면 기존 파일 + db path정보 삭제 (개수나 extensin 달라졌을 때 대비)
+
+db "uploaded_document"에 "id"
+
+24.07.25
+=========> DV, MP  정형화 form 들어온다 가정하고 실제 데이터 예시 3개씩 Upload
+===> AV, MS 실제 slide Upload 맞춰서
+
+(back) test => 삭제 => (front) => Upload 완벽하게
+
+=> upload 후 return response => set alert message ( + refetch)
+=> filter ( doc_type / file_type / created date )
+=> download url (O)
+=> delete (+ refetch)
+=> jpg png image upload (O)
+
+=> file extension JPG => save path as jpg => error
+original_file_name에 extension lowercase로 변경하기
+
+=> export const deleteUploadedDocument = gql` 
+mutation 바꿔야 함
+

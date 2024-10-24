@@ -1,0 +1,89 @@
+note 24.08
+
+매일 json파일을 만들어내는 것. -> 정리
+- airflow docker 안에 -> iddx-backend-etl/airflow/iddx_voc/adm_adapter.py ('partner_auth_list_')
+- iddx server ~/iddx안에 -> idvoc.l0_lge_idvoc_analysis*, idvoc.l0_lge_idvoc_task* 
+
+ilamp-etl/promining/connectedcare => import 정리
+
+
+- LEDOS
+    - Project
+        - 일반
+            - 담당자 : 선행영업 col 삭제 (조직 사라짐) / 아웃소싱 col만 업로드값으로 표시
+                    -> po_upload에 assignee col 추가 (note 오른쪽에)
+            - Excel : project 단위 (영업) 현행 / model 단위 (아웃소싱) - 1row 1 model 원본 추출 추가
+            - nbrm model/controller 처럼 구분
+        - 대기/별도
+            - project_name 긴 것들 안보임 -> column width 조정 or <tooltip /> 추가
+            - 일반 프로젝트 처럼 프로젝트 단위로 보여지게 -> lge_opp_code로 group_by하고 줄바꿈으로 처리
+        - 별도
+            - vendor_code 중복으로 여러 row upload -> id: vendor_code + model_name으로 변경
+        - 기타
+            - 수요일 배포 메일 수신자 추가 -> buffer_stock 처럼 수신자 관리 추가
+            - 배포 메일 본문 default format 수정
+            - 배포 메일 첨부 엑셀에는 mfg (vendor) 보이지 않게 수정
+            - 08.21부터 영업 배포 -> 08.19 Test Data 일괄 삭제 요청
+
+    - 사입가
+        - 과거 사입가 upload form 현재 사용하지 않음 -> singlex upload form으로 변경
+        - 1unit/price (영업용) / 1m^2/price (아웃소싱용) -> 아웃소싱 기준으로 변경
+        - AIO는 model_name 같아도 suffix따라 다름 -> model_name 같을 때는 맨위 (index 기준) 값으로 upload
+        - 한 번의 업로드에는 1개의 분기만 upload -> model기준 분기별 price가 추가되는 형식으로
+
+
+--------------------------------------------------------------------
+
+NOTE
+        project_name이 긴 것들 안보임 => <tooltip> 기능 추가
+        - extra_project => id : vendor_code => vendor_code + model_name 으로
+        - 대기/별도 : 일반처럼 lge_opp_code로 group_by하고 줄바꿈으로 처리 <br /> => render
+        - 담당자와 업로드하는 사람은 다르다!->- 담당자 column 추가해서 아웃소싱 담당자에
+        - 그 담당자 col은 맨 마지막에 (note 보다 뒤에)
+        - 선행 영업 담당자는 삭제
+        - 19일에 모든 데이터 삭제 요청
+        - excel extract => 1row 1model raw data로 추출
+        - project 단위로 묶인 것은 영업쪽용
+        - 베포메일에서 vendor는 보이지 않게 (mfg infiled, lh 같은거) 제거
+
+    - 사입가
+        - gql 중복 정리
+        - Dashboard : Tab fix (pitch graph ↔ pivot table 전환)
+        - 가격 정보는 2가지 - 달러 / m^2 (아웃소싱) , 1개 / m^2 (영업)
+        - AIO는 가격 정보가 지역마다 다름
+        - 한 번의 업로드에 1개 분기만 업로드함
+        - 한 번의 모델이 여러개면 => 무조건 맨위에 것 두고 나머지 remove
+        - singlex(영업용)은 현재의 unit price만 중요 / iddx에는 아웃소싱용 시간대별 area price가 중요 diff 비교
+
+
+        ==========================================
+
+    vi율 관련 건
+
+    - 로직) 
+    - 프로젝트 별 할인율
+
+    - vi => 사입가 only 
+
+    08.21 영업 배포 일 !
+
+
+        ====================================================================================
+    pr -> 영업이 줌
+
+rfq -> 
+
+
+발주 error 줄인다 즉 po를 줄인다
+
+
+------------------
+
+24.08.29 memo
+ledos price - reduction rate - sorting + pagination / 시작 fullN 까지하면 일단 ok
+
+=> price -> unit_price, sqm_price
+
+메일 응답 - QS-tech BRM에서 가져오기 / sorting기능 정비하기
+
+조창환C - 권한 o LEDOS_VIEW

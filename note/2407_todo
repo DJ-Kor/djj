@@ -1,0 +1,64 @@
+note 24.07
+
+s4_db_port 처럼 분리되어있는 것은 naming 한개로 ? /두개 해서 차례로 ? => switching / fixed로 분리
+
+elixir => home (~) 에 위치
+
+a = os.getenv('DEE_HOST', '없으면이거') 
+b = os.environ['LOGNAME'] -> 없으면 raise error
+c = os.environ.get('LOGNAME', '없으면이거')
+
+os.environ : 모든 env var이 있는 dict 객체
+
+dotenv('.env1') => dotenv('.env2')
+.env2값으로 덮어쓰이지 않음! 먼저 불러온 값 유지 !! => override=True option 사용!
+
+src / views/ fieldissue folder 삭제
+
+DEE elasticsearch 관련 env 자체를 삭제 하고 관련 page모두 삭제
+jira_basic_auth => (id, pw) 에서 jira id , jira pw 로 변경 => ldap과 환경변수 통합 O
+
+
+.env 는 (개발용+common) 모든 환경변수 다 때려넣고
+switching하는 것만 .env.production = > override=True O
+
+## 24.07 WorkFlow
+### 1. Repository별로 나누어져있는 env var을 .env.development / .env.production에 통합 & commit
+### 2. 사용하는 .env를 새로 만든 .env로 변경 / 작동확인
+
+### 3. 같은 value지만 var name이 다른 것들을 .env에서 통합
+### 4. 모든 repo에서 env var name 변경 / 작동확인
+
+### 5. 1~4가 완료 되면 기존 .env file 삭제 / 통합.env에서 중복 var 삭제
+
+
+connect_db => 공용화 .. => connect_db (iddx 446 / backend 270 / ilamp 104 / aid 3)
+# iddx의 server_python 과 / iddx-backend-etl, ilamp-etl 중복코드 정리
+ - server_pyhon/nginx 삭제, server_python/fastapi -> fastapi-ml 이동
+
+ - 중복.py => ldap_connector / send_mail과 send_email / 
+   src/upload_excel/안에 => consumer_master / dev_master / doc_product_plan / 
+
+ ★ iddx
+ - crontab - update_pms.py, idtechinq_reminder.py, webos_partner_info.py, cppm_transfer_v2.py, action_status.py, 
+ ldap_connector.py, email_download.py, devmaster_signal_update.py
+ - #crontab - send_email.py, idvoc_reminder.py, 
+ ★ iddx-server4
+ - crontab - jira_crawling.py, promining_user.py, led_installation_feed.py, crawler_executer.py
+ - #crontab - monitoring_server.py, eudsl_voc.py, modeling_bertopic.py, itc_procurement_map.py, salesforce_connector.py, weather.py, cc_report_daily_process.py
+  # cc_register_daily_process.py,  pc_daily.py,
+
+# connect_db refactor => 적용
+# iddx_config, iddx_configs, config => file name 통일 / 안쓰는 변수 삭제
+
+
++) fastapi 작동안하는 (datafinder del같은.. 정리) => method(POST, DELETE 등) 정리
++) jh.y , yr.j - srv4, srv5 => 1TB 정리
++) common_utils.send_msg_teams_channel refactor => retiring of office365 connector -> 24.10.1 종료!!
+https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/
+We will gradually roll out this change in waves:
+Wave 1 – effective August 15th, 2024: All new Connector creation will be blocked within all clouds
+Wave 2 – effective October 1st, 2024: All connectors within all clouds will stop working
+
++) elasticsearch snapshot policy가 적용되지 않음 (7days 이후 삭제 안됨)
++) elasticsearch "useByteOrder~" option이 "export_csv"는 되는데 "download_csv"는 적용 안되는 현상

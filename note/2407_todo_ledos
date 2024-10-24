@@ -1,0 +1,17 @@
+2407 LEDOS Requests
+
+-> 일반 프로젝트에 보이지 않는 (NBRM non-matching) 프로젝트도 보이게 요청 => 대기 프로젝트 Dashboard 메뉴 개설 (StandbyProjectStatus)
+  - 메뉴 개설 O / 엑셀 추출 기능 O / 삭제 기능 X
+  http://mod.lge.com/code/projects/ILAMP/repos/iddx/commits/3e13486e26842b0ea1f8514bf064eb32df87b634
+  http://mod.lge.com/code/projects/ILAMP/repos/iddx/commits/81bacb16e1694414a5b2bcc8d876d22b98aa3f44
+-> Excel추출 포맷 변경 요청 (column이름 변경, 삭제) / (일반+대기) 같이 추출 기능 요청 O
+  http://mod.lge.com/code/projects/ILAMP/repos/iddx/commits/6c12151883b31aba22dbc88169c96b13246e2879
+
+-----------
+해야하는 것
+-> Excel (일반+대기+별도) 같이 추출 기능 요청 / OPEN 건만
+-> Excel 전체 추출물 수요일 오후 4시 메일 자동 배포 기능 요청
+-> 새로운 업체 (QS-Tech) 추가 요청 
+  - PO Upload O / NBRM 검토 필요 O / => front도 검토 필요
+http://mod.lge.com/code/projects/ILAMP/repos/iddx/commits/6c12151883b31aba22dbc88169c96b13246e2879
+-> 대기 프로젝트 삭제 기능

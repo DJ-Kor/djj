@@ -39,17 +39,17 @@ print(' -- [0] -- ')
 print(df)
 
 print(' -- [1] -- ')
-print(df.reset_index(inplace=True))  # 'index' 생김
+print(df.reset_index(inplace=True))  # col 'index' 생김
 print(df)
 
 print(' -- [2] -- ')
-print(df.reset_index(inplace=True))  # 'level_0' 생김
+print(df.reset_index(inplace=True))  # col 'level_0' 생김
 print(df)
 
 print(' -- [3] -- ')
-print(df.reset_index(drop=True))  # Error
+print(df.reset_index(drop=True))  # drop OK
 print(df)
 
 print(' -- [4] -- ')
-print(df.reset_index(inplace=True))
+print(df.reset_index(inplace=True))  # Error - raise ValueError(f"cannot insert {column}, already exists")
 print(df)

@@ -1,0 +1,34 @@
+// server4/.vscode-server/ 하위에서
+{
+  "folders": [
+    {
+      "path": "./../iddx"
+    },
+    {
+      "path": "./../iddx-backend-etl"
+    },
+    {
+      "path": "./../dockers"
+    },
+    {
+      "path": "./../elixir"
+    },
+    {
+      "path": "./../ilamp-etl"
+    }
+  ],
+  "settings": {
+    "files.watcherExclude": {
+      "**/node_modules/**": true,
+      "**/.git/**": true,
+      "**/venv/**": true,
+      "**/site-packages/**": true,
+      "**/testdj/**": true,
+      "**/*.log": true
+    }
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": []
+  }
+}

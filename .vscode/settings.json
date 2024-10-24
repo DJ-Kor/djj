@@ -3,7 +3,7 @@
 {
   // common
   "editor.rulers": [0, 80, 120, 160, 161, 162, 163, 164, 165],
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // "editor.defaultFormatter": "esbenp.prettier-vscode",
   // user setting에서 files.association으로 어떤 file로 인식할지 설정
   // "files.associations": {
   //   // "*.json": "jsonc",

@@ -1,5 +1,20 @@
-# copy from clipboard
-shift + insert
+# insert mode / normal mode / visual mode
+"i" / Esc / "v"
 
-# delete line
-number + dd
+
+# copy from clipboard => shift + insert
+
+# delete line => number + dd
+
+# copy line => yy
+
+# paste line => p
+
+# undo(ctrl+z) => u
+
+# redo => ctrl + r
+
+# save and quit => :wq
+
+# not save and quit => :q!
+
