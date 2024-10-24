@@ -1,0 +1,95 @@
+KIBANA -> SHARE
+
+>_ Embed_code
+    - Snaptshot -- _a=() // Snapshot URLs encode the current state of the dashboard in the URL itself. Edids to the saved dashboard won't be visible via this URL.
+        -> <iframe src="http://iddx.lge.com:5601/s/sales/app/dashboards#/view/497533cb-1926-5f70-aabc-c6111a319e0a?embed=true&_g=()&_a=()&hide-filter-bar=true" height="600" width="800"></iframe>
+        - Include
+            - Top menu - show-top-menu=true
+                Full Screen / Share / Reset 이렇게만 뜸 --- 없어도 ㄱㅊ 
+                -> snapshot
+                    - <iframe src="http://iddx.lge.com:5601/s/sales/app/dashboards#/view/497533cb-1926-5f70-aabc-c6111a319e0a?embed=true&_g=()&_a=()&show-top-menu=true&hide-filter-bar=true" height="600" width="800"></iframe>
+                -> saved obj
+                    - <iframe src="http://iddx.lge.com:5601/s/sales/app/dashboards#/view/497533cb-1926-5f70-aabc-c6111a319e0a?embed=true&_g=()&show-top-menu=true&hide-filter-bar=true" height="600" width="800"></iframe>
+            - Query - show-query-input=true
+                -> snapshot <iframe src="http://iddx.lge.com:5601/s/sales/app/dashboards#/view/497533cb-1926-5f70-aabc-c6111a319e0a?embed=true&_g=()&_a=()&show-query-input=true&hide-filter-bar=true" height="600" width="800"></iframe>
+                -> saved obj <iframe src="http://iddx.lge.com:5601/s/sales/app/dashboards#/view/497533cb-1926-5f70-aabc-c6111a319e0a?embed=true&_g=()&show-query-input=true&hide-filter-bar=true" height="600" width="800"></iframe>
+            - Time filter - show-time-filter=true
+                -> <iframe src="http://iddx.lge.com:5601/s/sales/app/dashboards#/view/497533cb-1926-5f70-aabc-c6111a319e0a?embed=true&_g=()&_a=()&show-time-filter=true&hide-filter-bar=true" height="600" width="800"></iframe>
+            - Filter bar - hide-filter-bar은 default false
+                -> <iframe src="http://iddx.lge.com:5601/s/sales/app/dashboards#/view/497533cb-1926-5f70-aabc-c6111a319e0a?embed=true&_g=()&_a=()" height="600" width="800"></iframe>
+        - Option
+            - Short URL -- // We recommend sharing shortened snapshot URLs for maximum compatibility. Internet Explorer has URL length restrictions, and some wiki and markup parsers don't do well with the full-length version of the snapshot URL, but the short URL should work great.
+            -> <iframe src="http://iddx.lge.com:5601/s/sales/app/r/s/ZB5eC" height="600" width="800"></iframe>
+
+        -> saved obj + include all - <iframe src="http://iddx.lge.com:5601/s/sales/app/dashboards#/view/f71eb2aa-bccf-5673-ac02-d3bbd6083036?embed=true&_g=()&show-top-menu=true&show-query-input=true&show-time-filter=true" height="600" width="800"></iframe>
+    - Saved object -- // You can share this URL with people to let them load the most recent saved version of this dashboard.
+
+
+& Get links
+    - Snaptshot
+        -> http://iddx.lge.com:5601/s/sales/app/dashboards#/view/f71eb2aa-bccf-5673-ac02-d3bbd6083036?_g=()&_a=()
+        - Option
+            - Short URL
+            -> http://iddx.lge.com:5601/s/sales/app/r/s/LHnGb
+
+    - Saved object
+        -> http://iddx.lge.com:5601/s/sales/app/dashboards#/view/f71eb2aa-bccf-5673-ac02-d3bbd6083036?_g=()
+
+
+
+IDDX - 수주
+        - 연도별 수주/매출 현황
+            - release : false // 데이터 매핑 이슈
+        - 제품별 수주/매출 현황
+            - component TableBase
+        - 모델별 수주 현황
+            - kibana dashboard 새로 생김 - KibanaDashboard.js
+            `http://iddx.lge.com:5602/s/sales/app/dashboards#/view/78624e00-6f2b-11ef-9f6d-e9dc2e2b0f8b?embed=true&_g=(refreshInterval%3A(pause%3A!t%2Cvalue%3A60000)%2Ctime%3A(from%3Anow-1y%2Cto%3Anow))&show-query-input=true&show-time-filter=true`;
+        - 제품 판매
+            - kibana - SalesStatusPage.js - SalesStatusKibana
+            - const SalesKibanaUrl = (filter = '') => top menu (x) / query (o) / time filter (o) / filter bar (o)
+            `http://iddx.lge.com:5602/s/sales/app/dashboards#/view/f71eb2aa-bccf-5673-ac02-d3bbd6083036?embed=true&_g=(filters%3A!('')%2CrefreshInterval%3A(pause%3A!t%2Cvalue%3A0)%2Ctime%3A(from%3A'2015-12-31T15%3A00%3A00.000Z'%2Cto%3Anow))&show-query-input=true&show-time-filter=true`;
+
+        - > 커머셜 TV
+            - kibana - SalesStatusPage.js - SalesStatusCommercialKibana
+            - filter : "(query:(match_phrase:(division.keyword:'Commercial%20TV')))"
+            filters%3A!((query:(match_phrase:(division.keyword:'MNT%20Signage'))))
+        - > 사이니지
+            - kibana - SalesStatusPage.js - SalesStatusSignageKibana
+            - filter : "(query:(match_phrase:(division.keyword:'MNT%20Signage')))"
+        - > 솔루션
+            - kibana - SalesStatusPage.js - SalesStatusSolutionKibana
+            "http://iddx.lge.com:5602/s/sales/app/dashboards#/view/497533cb-1926-5f70-aabc-c6111a319e0a?embed=true&_g=(filters%3A!()%2CrefreshInterval%3A(pause%3A!t%2Cvalue%3A0)%2Ctime%3A(from%3A'2015-12-31T15%3A00%3A00.000Z'%2Cto%3Anow))&show-query-input=true&show-time-filter=true&hide-filter-bar=true"
+
+
+Error 
+1. The Cross-Origin-Opener-Policy header has been ignored,
+ because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. 
+ Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead.
+  See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header.
+
+=> elasticsearch.yml에 http.cors.allow-origin 같은 설정 추가
+ server.js에 corsOption으로 allow-origin 추가
+ https://www.elastic.co/guide/en/elasticsearch/reference/current/behavioral-analytics-cors.html
+
+2.Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'self'". 
+Either the 'unsafe-inline' keyword, a hash ('sha256-P5polb1UreUSOe5V/Pv7tc+yeZuJXiOi/3fqhGsU7BE='), or a nonce ('nonce-...') is required to enable inline execution.
+
+=> kibana error (아직 해결 안됨)
+
+A single error about an inline script not firing due to content security policy is expected!
+
+
+3. kbn-ui-shared-deps-npm.dll.js:1180 
+You are currently using minified code outside of NODE_ENV === "production". 
+This means that you are running a slower development build of Redux. 
+You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify or setting mode to production in webpack (https://webpack.js.org/concepts/mode/) to ensure you have the correct code for your production build.
+
+4. kbn-ui-shared-deps-npm.dll.js:28
+Deprecation warning: value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. 
+Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.
+Arguments: 
+[0] _isAMomentObject: true, _isUTC: false, _useUTC: false, _l: undefined, _i: now+1M, _f: undefined, _strict: undefined, _locale: [object Object]
+Error
+
+=> kibana version 지금 iddx가 8.11인데 8.12 이상에서 "store time with dashboard" 해제 -  valid datetime설정 - "store time with dashboard"설정 하면 해결됨
