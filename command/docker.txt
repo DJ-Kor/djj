@@ -7,3 +7,7 @@ prune --filter "label!=*" 라벨없는 것 모두
 docker exec -it <container> bash
 # -u0 : user root
 docker exec -itu0 <container> bash
+
+alias dpaf="docker ps -a --format 'table {{.ID}}\t{{.Image}}\t{{.Command}}\t{{.CreatedAt}}\t{{.Status}}\t{{.Names}}'"
+docker ps -a --format "table {{.Names}}\t{{.CreatedAt}}\t{{.Status}}"
+docker ps -a --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}\t{{.CreatedAt}}"
