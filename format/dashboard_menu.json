@@ -1,0 +1,27 @@
+[
+  {
+    "menuname": "Analysis",
+    "submenu": [
+      {
+        "title": "Business Cloud License Request Status",
+        "URL": "http://promining.lge.com:5602/s/id-cloud-solution/app/dashboards#/view/674bc4da-f4bf-411b-a026-8ca68748f7ef?embed=true&_g=(refreshInterval%3A(pause%3A!t%2Cvalue%3A60000)%2Ctime%3A(from%3A'2022-12-31T15%3A00%3A00.000Z'%2Cto%3Anow))&show-query-input=true&show-time-filter=true"
+      },
+      {
+        "title": "Device Management Status",
+        "URL": "http://promining.lge.com:5602/s/self-service-bi/app/dashboards#/view/eb674210-c581-11ee-a9de-c19819db9dfc?embed=true&_g=(refreshInterval%3A(pause%3A!t%2Cvalue%3A60000)%2Ctime%3A(from%3Anow-1y%2Fd%2Cto%3Anow))&show-query-input=true&show-time-filter=true"
+      },
+      {
+        "title": "Pro:Centric Cloud License Analytics",
+        "URL": "http://promining.lge.com:5602/s/procentric/app/dashboards#/view/b2935e37-4fd6-4ac1-8425-a0561cbbe852?embed=true&_g=(refreshInterval%3A(pause%3A!t%2Cvalue%3A60000)%2Ctime%3A(from%3Anow-1d%2Cto%3Anow))&show-query-input=true&show-time-filter=true"
+      },
+      {
+        "title": "SuperSign EDA(Exploratory Data Analysis)",
+        "URL": "http://promining.lge.com:5602/s/supersign/app/dashboards#/view/7a62616b-2132-429b-b7f3-bdb846bfd49d?embed=true&_g=(refreshInterval%3A(pause%3A!t%2Cvalue%3A60000)%2Ctime%3A(from%3Anow-1y%2Fd%2Cto%3Anow))&show-query-input=true&show-time-filter=true"
+      },
+      {
+        "title": "LG CC License Purchase Status",
+        "URL": "http://promining.lge.com:5602/s/self-service-bi/app/dashboards#/view/0f07c130-94d7-11ee-ae91-77eb3d269855?_g=()"
+      }
+    ]
+  }
+]

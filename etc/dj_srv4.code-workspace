@@ -1,44 +1,64 @@
 {
   "folders": [
     {
+      "name": "djj",
       "path": ".."
     },
     {
+      "name": "crawling",
+      "path": "../../crawling"
+    },
+    {
+      "name": "iddx",
       "path": "../../iddx"
     },
     {
+      "name": "dockers",
       "path": "../../dockers"
     },
     {
+      "name": "iddx-backend-etl",
       "path": "../../iddx-backend-etl"
     },
     {
+      "name": "iddx-backend-ml",
       "path": "../../iddx-backend-ml"
     },
     {
+      "name": "ilamp-frontend",
       "path": "../../ilamp-frontend"
     },
     {
+      "name": "ilamp-backend",
       "path": "../../ilamp-backend"
     },
     {
+      "name": "ilamp-etl",
       "path": "../../ilamp-etl"
     },
     {
+      "name": "aid-backend-etl",
       "path": "../../aid-backend-etl"
     },
     {
+      "name": "solution_chatbot_ui",
       "path": "../../solution_chatbot_ui"
     },
     {
+      "name": "solution_chatbot_backend",
       "path": "../../solution_chatbot_backend"
     },
     {
+      "name": "pcc-report-fastapi",
       "path": "../../pcc-report-fastapi"
     },
     {
+      "name": "elixir",
       "path": "../../elixir"
-    }
+    },
+    {
+      "path": "../../id-keyword-analysis"
+    },
   ],
   "settings": {}
 }

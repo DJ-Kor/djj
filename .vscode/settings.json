@@ -37,7 +37,8 @@
     "editor.formatOnSave": true
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode", // vscode 는 줄바꿈 많음
+    // "editor.defaultFormatter": "esbenp.prettier-vscode", // vscode 는 줄바꿈 많음
+    "editor.defaultFormatter": "vscode.json-language-features", // vscode 는 줄바꿈 많음
     "editor.formatOnSave": true
   },
   // docker-compose
