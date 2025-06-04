@@ -1,0 +1,32 @@
+{
+  "folders": [
+    {
+      "path": ".."
+    },
+    {
+      "path": "../../iddx"
+    },
+    {
+      "path": "../../iddx-backend-etl"
+    },
+    {
+      "path": "../../ilamp-frontend"
+    },
+    {
+      "path": "../../ilamp-backend"
+    },
+    {
+      "path": "../../ilamp-etl"
+    },
+    {
+      "path": "../../dockers"
+    },
+    {
+      "path": "../../elixir"
+    },
+    {
+      "path": "../../"
+    }
+  ],
+  "settings": {}
+}
